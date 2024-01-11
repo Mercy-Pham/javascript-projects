@@ -1,3 +1,6 @@
-console.log("Some Programming Languages:");
+const input = require('readline-sync');
 
-console.log("Python\nJavaScript\nJava\nC#\nSwift");
+let num1 = Number(input.question("Enter a number: "));
+let num2 = Number(input.question("Enter another number: "));
+
+console.log(num1 + num2);

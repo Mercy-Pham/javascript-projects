@@ -1,6 +1,6 @@
-   // This demo shows off comments!
+   // This demo shows off comments! I can type here without any issues
 
-   // console.log("This does not print.");
+   // console.log("This does not print."); but what about here? Is there a way to do like a shortcut to the file destination when I start my terminal?
 
    console.log("Hello, World!"); // Comments do not have to start at the beginning of a line.
 
