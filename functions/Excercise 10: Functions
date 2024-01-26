@@ -1,0 +1,67 @@
+function makeLine (size) {
+    let multiplehashes = '';
+    for (let i = 0; i < size; i++){
+        multiplehashes += '#';
+    } 
+    return multiplehashes;
+} 
+
+function makeSquare (size) {
+    // let squareRow = makeLine(size);
+    // let square = '';
+    // for (let i = 0; i < size; i++){
+    //     square += '\n' + squareRow;
+    // } 
+    // return square;
+
+    return makeRectangle(size,size);
+}
+
+function makeRectangle (width, height) {
+    let row = makeLine(width);
+    let rectangle = '';
+    for (let i = 0; i < height; i++) {
+        rectangle += '\n' + row;
+    }
+    return rectangle.slice(1);
+}
+
+function makeDownwardStairs (height) {
+    let downStairs = '';
+    for (let i = 0; i < height; i++) {
+        downStairs += "\n" + makeLine(i+1);
+    }
+    return downStairs.slice(1);
+} 
+
+function makeSpaceLine (numSpaces, numChars) {
+    let spaces = "";
+    for (let i = 0; i < numSpaces; i++) {
+        spaces += " ";
+    }
+    let chars = makeLine(numChars);
+    return spaces + chars + spaces;
+}
+
+function makeIsoscelesTriangle (height) {
+    // let emptySpaces = '';
+    // for (let i = 0; i < height; i = i + 2); {
+    //     emptySpaces += ' ';
+    // }
+    // return makeSpaceLine (emptySpaces, makeDownwardStairs(height));
+    let triangle = '';
+    for (let i = 0; i < height; i++) {
+        triangle += "\n" + makeSpaceLine(height - i - 1, 2 * i + 1);
+    }
+    return triangle.slice(1);
+}
+
+function makeDiamond (height) {
+    let diamond = "";
+        diamond = makeIsoscelesTriangle(height).split('').reverse().join('');
+    
+    return makeIsoscelesTriangle(height) + "\n" + diamond;
+}
+
+
+
