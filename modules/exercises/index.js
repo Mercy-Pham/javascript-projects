@@ -1,6 +1,6 @@
 //Import modules:
 const input = require('readline-sync');
-const averages = require('./averages.js');
+const averages = require('./ScoreCalcs/averages.js');
 const printAll = require('./display.js');
 const randomSelect = require('./randomSelect.js');
 
